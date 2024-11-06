@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": false,
+        "amount": 10
+    },
+    "auditLog": "D:\\Project\\express_boilerplate\\dist\\logs\\error\\.d1b287fe752ccbe3e55ad85f86652de4b234cc01-audit.json",
+    "files": [
+        {
+            "date": 1730866036602,
+            "name": "D:\\Project\\express_boilerplate\\dist\\logs\\error\\2024-11-06.log",
+            "hash": "e9f6a17f0fa4c16c7e31b5e09129c4c38c156961d0e155092e7d2a70ff8b472a"
+        }
+    ],
+    "hashType": "sha256"
+}

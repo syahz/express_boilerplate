@@ -1,0 +1,121 @@
+2024-11-06 11:21:26 error: [
+  {
+    "code": "too_small",
+    "minimum": 1,
+    "type": "string",
+    "inclusive": true,
+    "exact": false,
+    "message": "String must contain at least 1 character(s)",
+    "path": [
+      "password"
+    ]
+  },
+  {
+    "code": "too_small",
+    "minimum": 1,
+    "type": "string",
+    "inclusive": true,
+    "exact": false,
+    "message": "String must contain at least 1 character(s)",
+    "path": [
+      "name"
+    ]
+  }
+]
+2024-11-06 11:22:37 error: 
+Invalid `prismaClient.user.update()` invocation in
+D:\Project\express_boilerplate\src\services\user-services.ts:60:48
+
+  57   user.password = await bcrypt.hash(updateRequest.password, 10)
+  58 }
+  59 
+→ 60 const userResult = await prismaClient.user.update({
+       where: {
+         username: undefined,
+     ?   AND?: UserWhereInput | UserWhereInput[],
+     ?   OR?: UserWhereInput[],
+     ?   NOT?: UserWhereInput | UserWhereInput[],
+     ?   password?: StringFilter | String,
+     ?   name?: StringFilter | String,
+     ?   contacts?: ContactListRelationFilter
+       },
+       data: {
+         username: "sumbulraya",
+         password: "$2b$10$mixH16YwiJpWTNNq5i8sU.vrBFbonDPhM8/Pf6m05ycIui0BehpLK",
+         name: "benar"
+       }
+     })
+
+Argument `where` of type UserWhereUniqueInput needs at least one of `username` arguments. Available options are marked with ?.
+2024-11-06 11:25:26 error: [
+  {
+    "code": "too_small",
+    "minimum": 1,
+    "type": "string",
+    "inclusive": true,
+    "exact": false,
+    "message": "String must contain at least 1 character(s)",
+    "path": [
+      "password"
+    ]
+  },
+  {
+    "code": "too_small",
+    "minimum": 1,
+    "type": "string",
+    "inclusive": true,
+    "exact": false,
+    "message": "String must contain at least 1 character(s)",
+    "path": [
+      "name"
+    ]
+  }
+]
+2024-11-06 11:32:12 error: [
+  {
+    "code": "too_small",
+    "minimum": 1,
+    "type": "string",
+    "inclusive": true,
+    "exact": false,
+    "message": "String must contain at least 1 character(s)",
+    "path": [
+      "password"
+    ]
+  },
+  {
+    "code": "too_small",
+    "minimum": 1,
+    "type": "string",
+    "inclusive": true,
+    "exact": false,
+    "message": "String must contain at least 1 character(s)",
+    "path": [
+      "name"
+    ]
+  }
+]
+2024-11-06 11:39:31 error: [
+  {
+    "code": "too_small",
+    "minimum": 1,
+    "type": "string",
+    "inclusive": true,
+    "exact": false,
+    "message": "String must contain at least 1 character(s)",
+    "path": [
+      "password"
+    ]
+  },
+  {
+    "code": "too_small",
+    "minimum": 1,
+    "type": "string",
+    "inclusive": true,
+    "exact": false,
+    "message": "String must contain at least 1 character(s)",
+    "path": [
+      "name"
+    ]
+  }
+]
