@@ -19,20 +19,5 @@ model User {
   password String  @db.VarChar(100)
   name     String  @db.VarChar(100)
 
-  contacts Contact[]
-
   @@map("users")
-}
-
-model Contact {
-  id          String    @id @default(uuid())
-  first_name String     @db.VarChar(100)
-  last_name  String?    @db.VarChar(100)
-  email      String?    @db.VarChar(100)
-  phone      String?    @db.VarChar(20)
-  username   String     @db.VarChar(100)
-
-  user      User      @relation(fields: [username], references: [username])
-
-  @@map("contacts")
 }

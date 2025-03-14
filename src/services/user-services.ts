@@ -66,7 +66,25 @@ export const updateUser = async (username: string, request: UpdateUserRequest): 
 
     return toUserResponse(userResult)
   } catch (error) {
-    logger.error(error)
-    throw new ResponseError(500, 'Internal Server Error')
+    console.error('Error in Update User:', error)
+    throw error
   }
+}
+
+export const removeUser = async (username: string): Promise<UserResponse> => {
+  const removeUser = await prismaClient.user.findFirst({
+    where: {
+      username
+    }
+  })
+
+  if (!removeUser) {
+    throw new ResponseError(404, 'Username not found')
+  }
+  const users = await prismaClient.user.delete({
+    where: {
+      username: removeUser.username
+    }
+  })
+  return toUserResponse(users)
 }

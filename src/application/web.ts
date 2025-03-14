@@ -12,8 +12,6 @@ const corsOptions = {
 
 web.use(cors(corsOptions))
 
-web.use(cors(corsOptions))
-
 web.use(express.json())
 web.use(publicRouter)
 web.use(errorMiddleware)
